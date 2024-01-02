@@ -7,7 +7,7 @@ const UpdateContact = () => {
     const { id } = useParams();
     console.log(id);
 
-    const [product, setProduct] = useState([]);
+    const [contactInfo, setContactInfo] = useState([]);
     const [selected, setSelected] = useState([]);
     const [isloading, setIsLoading] = useState(true);
 
@@ -15,16 +15,16 @@ const UpdateContact = () => {
         fetch('http://localhost:5000/contacts')
             .then(res => res.json())
             .then(data => {
-                setProduct(data);
+                setContactInfo(data);
                 setIsLoading(false);
             })
     }, [])
 
     useEffect(() => {
-        const select = product.filter(p => p._id === id);
+        const select = contactInfo.filter(p => p._id === id);
         setSelected(select);
         setIsLoading(false);
-    }, [id, product])
+    }, [id, contactInfo])
 
     console.log(selected[0]);
 
@@ -35,20 +35,21 @@ const UpdateContact = () => {
 
 
         const name = form.name.value;
-        const projectName = form.projectName.value;
-        const description = form.description.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const address = form.address.value;
 
 
-        const project = { name, projectName, description }
+        const info = { name, email, phone, address}
 
-        console.log(project);
+        console.log(info);
 
         fetch(`http://localhost:5000/contacts/${selected[0]?._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(project)
+            body: JSON.stringify(info)
         })
             .then(res => res.json())
             .then(data => {
@@ -60,7 +61,7 @@ const UpdateContact = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                    window.location.href = '/';
+                    window.location.href = '/contacts';
                 }
             })
     }

@@ -9,7 +9,7 @@ const AddContacts = () => {
     const handleUpload = async (e) => {
         e.preventDefault();
 
-        const file = e.target.files[0]; 
+        const file = e.target.files[0];
         const formData = new FormData();
         formData.append('image', file);
 
@@ -57,7 +57,7 @@ const AddContacts = () => {
             })
             return;
         }
-        const project = { name, email, phone, address ,img }
+        const project = { name, email, phone, address, img }
 
         console.log(project);
         //send data 
@@ -88,7 +88,18 @@ const AddContacts = () => {
                 <h3 className="text-2xl font-semibold text-center mb-10">Add A Contact Info</h3>
                 <form onSubmit={handleAddProject}>
 
-                    <label>Your Name</label>
+                    <label>Profile Picture</label>
+                    <br />
+                    <input
+                        type="file"
+                        required
+                        className="my-4"
+                        accept="image/*"
+                        onChange={handleUpload}
+                    />
+
+                    <br />
+                    <label className=''>Your Name</label>
                     <br />
 
                     <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full my-4" required />
@@ -106,15 +117,7 @@ const AddContacts = () => {
                     <br />
                     <input type="text" name="address" placeholder="Address" className="input input-bordered w-full my-4" required />
 
-                    <label>Profile Picture</label>
-                    <br />
-                    <input
-                        type="file"
-                        required
-                        className="mt-4"
-                        accept="image/*"
-                        onChange={handleUpload}
-                    />
+
                     <input type="submit" className="btn w-full mt-4 bg-yellow-200" value="Add a project" />
 
                 </form>
