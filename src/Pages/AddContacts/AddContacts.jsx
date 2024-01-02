@@ -61,7 +61,7 @@ const AddContacts = () => {
 
         console.log(project);
         //send data 
-        fetch('https://necleo-project-builder.vercel.app/project', {
+        fetch('http://localhost:5000/contacts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -115,7 +115,6 @@ const AddContacts = () => {
                         accept="image/*"
                         onChange={handleUpload}
                     />
-
                     <input type="submit" className="btn w-full mt-4 bg-yellow-200" value="Add a project" />
 
                 </form>
