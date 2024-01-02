@@ -32,7 +32,7 @@ const AllContacts = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`/${_id}`, {
+                fetch(`http://localhost:5000/contacts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -40,7 +40,7 @@ const AllContacts = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your item has been deleted.',
+                                'Your contact info has been deleted.',
                                 'success'
                             )
                             const remain = project.filter(cart => cart._id !== _id);
