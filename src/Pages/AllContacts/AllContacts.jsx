@@ -71,7 +71,7 @@ const AllContacts = () => {
                                 <h2><span className="font-bold">Address</span> : {item.address}</h2>
                                 <div className="card-actions justify-evenly">
 
-                                    <Link to={`/update/${item._id}`} className="btn bg-yellow-200 text-2xl">Update <MdBrowserUpdated /></Link>
+                                    <Link to={`/updatecontact/${item._id}`} className="btn bg-yellow-200 text-2xl">Update <MdBrowserUpdated /></Link>
                                     <button
                                         onClick={() => handleDelete(item._id)}
                                         className="btn bg-yellow-200 text-2xl text-red-500">Delete <MdAutoDelete /></button>
