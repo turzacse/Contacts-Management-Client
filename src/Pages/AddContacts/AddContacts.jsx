@@ -3,7 +3,8 @@ import Swal from 'sweetalert2';
 
 const AddContacts = () => {
 
-    const image_hosting_key = 'https://api.imgbb.com/1/upload?key=39cd3de230380fc39b116f0d1af689bd';
+    const key = import.meta.env.VITE_IMAGE_HOSTING
+    const image_hosting_key = `https://api.imgbb.com/1/upload?key=${key}`;
 
     const [img, setImg] = useState('')
     const handleUpload = async (e) => {

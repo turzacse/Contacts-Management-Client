@@ -54,7 +54,7 @@ const AllContacts = () => {
 
     console.log(project);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             {
                 project.map(item => <div className="" key={item.id}>
                     <div className="">
