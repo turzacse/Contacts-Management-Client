@@ -62,7 +62,7 @@ const AddContacts = () => {
 
         console.log(project);
         //send data 
-        fetch('http://localhost:5000/contacts', {
+        fetch('https://contacts-management-server.vercel.app/contacts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -119,7 +119,7 @@ const AddContacts = () => {
                     <input type="text" name="address" placeholder="Address" className="input input-bordered w-full my-4" required />
 
 
-                    <input type="submit" className="btn w-full mt-4 bg-yellow-200" value="Add a project" />
+                    <input type="submit" className="btn w-full mt-4 bg-yellow-200" value="Add Contact" />
 
                 </form>
             </div>

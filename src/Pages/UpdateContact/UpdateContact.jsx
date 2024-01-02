@@ -12,7 +12,7 @@ const UpdateContact = () => {
     const [isloading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/contacts')
+        fetch('https://contacts-management-server.vercel.app/contacts')
             .then(res => res.json())
             .then(data => {
                 setContactInfo(data);
@@ -44,7 +44,7 @@ const UpdateContact = () => {
 
         console.log(info);
 
-        fetch(`http://localhost:5000/contacts/${selected[0]?._id}`, {
+        fetch(`https://contacts-management-server.vercel.app/contacts/${selected[0]?._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

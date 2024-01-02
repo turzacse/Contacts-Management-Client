@@ -12,7 +12,7 @@ const AllContacts = () => {
     const [project, setProject] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/contacts')
+        fetch('https://contacts-management-server.vercel.app/contacts')
             .then(res => res.json())
             .then(data => {
                 setProject(data);
@@ -32,7 +32,7 @@ const AllContacts = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/contacts/${_id}`, {
+                fetch(`https://contacts-management-server.vercel.app/contacts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       {
         path: '/updatecontact/:id',
         element: <UpdateContact/>,
-        loader: async({ params }) => await fetch(`http://localhost:5000/contacts/${params.id}`)
+        loader: async({ params }) => await fetch(`https://contacts-management-server.vercel.app/contacts/${params.id}`)
       },
     ]
   },
