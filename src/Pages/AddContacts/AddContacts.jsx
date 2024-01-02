@@ -74,7 +74,7 @@ const AddContacts = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Your product has been added',
+                        title: 'Your contact info has been added',
                         showConfirmButton: false,
                         timer: 1500
                     })
