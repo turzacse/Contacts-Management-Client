@@ -32,10 +32,14 @@ This Contacts Management Application is a MERN (MongoDB, Express.js, React.js, N
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/turzacse/Contacts-Management-Client.git
+   git clone https://github.com/turzacse/Contacts-Management-Client
 
 
 
 2.Navigate to the project directory:
    ```bash
    cd Contacts-Management-Client
+
+3. Install dependencies:
+    ```bash
+    npm instal
