@@ -2,6 +2,10 @@
 
 This Contacts Management Application is a MERN (MongoDB, Express.js, React.js, Node.js) stack-based solution designed to efficiently manage contact details. It provides a user-friendly interface for users to add, view, update, and delete contact information.
 
+## Live Demo
+
+The live demo of this Contacts Management Application is hosted at [https://contact--solution.web.app/](https://contact--solution.web.app/). Click [here](https://contact--solution.web.app/) to access it.
+
 ## Features
 
 
@@ -43,9 +47,20 @@ This Contacts Management Application is a MERN (MongoDB, Express.js, React.js, N
 #### Install Dependancy
 
    npm instal 
+
    or
+
    npm i
+
+   or 
+
+   yarn install
 
 #### Run the client side
 
    npm run dev
+
+   or
+
+   yarn run dev
+
