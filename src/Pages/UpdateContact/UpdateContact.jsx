@@ -58,7 +58,7 @@ const UpdateContact = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Your project has been Updated',
+                        title: 'Your Contact has been Updated',
                         showConfirmButton: false,
                         timer: 1500
                     })
@@ -82,13 +82,13 @@ const UpdateContact = () => {
                     </div>
                     <form onSubmit={handleUpdate}>
 
-                        <input type="text" name="name" placeholder="Project Name" className="input input-bordered w-full my-4" defaultValue={selected[0]?.name} required />
+                        <input type="text" name="name" placeholder="Name" className="input input-bordered w-full my-4" defaultValue={selected[0]?.name} required />
 
-                        <input type="text" name="email" placeholder="Project Name" className="input input-bordered w-full my-4" defaultValue={selected[0]?.email} required />
+                        <input type="text" name="email" placeholder="Email" className="input input-bordered w-full my-4" defaultValue={selected[0]?.email} required />
 
-                        <input type="text" name="phone" placeholder="Project Name" className="input input-bordered w-full my-4" defaultValue={selected[0]?.phone} required />
+                        <input type="text" name="phone" placeholder="Phone" className="input input-bordered w-full my-4" defaultValue={selected[0]?.phone} required />
 
-                        <input name="address" placeholder="Project Name" className="input input-bordered w-full my-4" required defaultValue={selected[0]?.address}></input>
+                        <input name="address" placeholder="Address" className="input input-bordered w-full my-4" required defaultValue={selected[0]?.address}></input>
 
                         <input type="submit" className="btn w-full bg-yellow-200" value="Update" />
 

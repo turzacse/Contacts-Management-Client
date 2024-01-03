@@ -4,7 +4,12 @@ This Contacts Management Application is a MERN (MongoDB, Express.js, React.js, N
 
 ## Live Demo
 
-The live demo of this Contacts Management Application is hosted at [https://contact--solution.web.app/](https://contact--solution.web.app/). Click [here](https://contact--solution.web.app/) to access it.
+The live demo of this Contacts Management Application is hosted at [https://contact--solution.web.app/](https://contact--solution.web.app/).Click [here](https://contact--solution.web.app/) to access it.
+
+## Backend Repository
+
+The backend code for this Contacts Management Application is available in the [Contact-Management-Server](https://github.com/turzacse/Contact-Management-Server) repository.
+
 
 ## Features
 
@@ -31,7 +36,7 @@ The live demo of this Contacts Management Application is hosted at [https://cont
 - Node.js installed on your machine
 - npm or yarn package manager
 
-## Installation
+## Cleint side Installation
 
 1. Clone the repository:
 
@@ -46,21 +51,36 @@ The live demo of this Contacts Management Application is hosted at [https://cont
 
 #### Install Dependancy
 
+##### 1
    npm instal 
-
    or
-
    npm i
-
    or 
-
    yarn install
 
-#### Run the client side
-
+##### 2
    npm run dev
-
    or
-
    yarn run dev
 
+
+## Server side Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/turzacse/Contact-Management-Server
+
+
+#### Navigate to the project directory:
+
+   cd Contact-Management-Server
+
+
+#### Install dependency 
+
+   npm install
+
+   nodemon index.js
+
+##### server will be run on port 5000.
