@@ -36,10 +36,16 @@ This Contacts Management Application is a MERN (MongoDB, Express.js, React.js, N
 
 
 
-2.Navigate to the project directory:
-   ```bash
+#### Navigate to the project directory:
+
    cd Contacts-Management-Client
 
-3. Install dependencies:
-    ```bash
-    npm instal
+#### Install Dependancy
+
+   npm instal 
+   or
+   npm i
+
+#### Run the client side
+
+   npm run dev
