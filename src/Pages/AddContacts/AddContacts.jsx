@@ -94,7 +94,7 @@ const AddContacts = () => {
                     <input
                         type="file"
                         required
-                        className="my-4"
+                        className="my-4 w-3/4"
                         accept="image/*"
                         onChange={handleUpload}
                     />

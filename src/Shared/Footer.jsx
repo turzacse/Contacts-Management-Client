@@ -24,10 +24,10 @@ const Footer = () => {
                     <Link to='/contacts'>All Contacts</Link>
                 </nav>
                 <nav>
-                    <header className="footer-title">Legal</header>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <header className="footer-title">Feature</header>
+                    <a className="link link-hover">Responsive Design</a>
+                    <a className="link link-hover">Crud Operation</a>
+                    <a className="link link-hover"></a>
                 </nav>
             </footer>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
