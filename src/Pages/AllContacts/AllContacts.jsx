@@ -5,6 +5,7 @@ import { FaBookmark } from "react-icons/fa";
 
 const AllContacts = () => {
     const [project, setProject] = useState([]);
+    const [loading, setloading] = useState(true);
 
     useEffect(() => {
         fetch('https://contacts-management-server.vercel.app/contacts')
@@ -54,8 +55,6 @@ const AllContacts = () => {
         }
       };
 
-    console.log(project);
-
     const handleFavorite = (id) => {
         const updatedProject = project.map((item) =>
             item._id === id ? { ...item, role: "favorite" } : item
@@ -100,11 +99,12 @@ const AllContacts = () => {
             <div className="mx-auto text-center md:w-4/12 my-8">
                 <h3 className="text-3xl uppercase border-y-4 py-4">All of My Contacts</h3>
             </div>
+
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                 {
-                    project.map(item => <div className="" key={item.id}>
+                    project?.map(item => <div className="" key={item.id}>
                         <div className="">
-
+                            
                             <div className="card-compact bg-base-100 shadow-xl">
 
                                 <figure><img className="shadow-2xl h-[200px] w-1/2 mx-auto rounded-xl" src={item.img} alt="profile image" /></figure>
