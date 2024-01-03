@@ -12,13 +12,13 @@ const Footer = () => {
             <footer className="footer p-10 bg-neutral text-neutral-content">
                 <nav>
                     <header className="footer-title">My Services</header>            
-                    <a className="link link-hover">MERN Development</a>
+                    <a className="link link-hover">MERN Stack Development</a>
                     <a className="link link-hover">Web Developmenmt</a>
                     <a className="link link-hover">Front End Development</a>
                     <a className="link link-hover">Responsive Design</a>
                 </nav>
                 <nav>
-                    <header className="footer-title">Contact Management</header>
+                    <header className="footer-title">Contact Solution</header>
                     <Link to='/'>Home</Link>
                     <Link to='/addcontacts'>Add Contacts</Link>
                     <Link to='/contacts'>All Contacts</Link>

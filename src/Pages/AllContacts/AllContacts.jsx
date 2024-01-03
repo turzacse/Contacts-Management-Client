@@ -52,13 +52,23 @@ const AllContacts = () => {
             }
         })
     }
+    const handleMenuSelection = (_id, selectedOption) => {
+        if (selectedOption === "update") {
+          window.location.href = `/updatecontact/${_id}`;
+        } else if (selectedOption === "delete") {
+          handleDelete(_id);
+        }
+      };
 
     console.log(project);
     return (
         <>
-        <Helmet>
-            <title>All Contacts</title>
-        </Helmet>
+            <Helmet>
+                <title>All Contacts</title>
+            </Helmet>
+            <div className="mx-auto text-center md:w-4/12 my-8">
+                <h3 className="text-3xl uppercase border-y-4 py-4">All of My Contacts</h3>
+            </div>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                 {
                     project.map(item => <div className="" key={item.id}>
@@ -74,12 +84,23 @@ const AllContacts = () => {
                                         <h2><span className="font-bold">Email</span> : {item.email}</h2>
                                     </div>
                                     <h2><span className="font-bold">Address</span> : {item.address}</h2>
-                                    <div className="card-actions justify-evenly">
+                                    {/* <div className="card-actions justify-evenly">
 
                                         <Link to={`/updatecontact/${item._id}`} className="btn bg-yellow-200 text-2xl">Update <MdBrowserUpdated /></Link>
                                         <button
                                             onClick={() => handleDelete(item._id)}
                                             className="btn bg-yellow-200 text-2xl text-red-500">Delete <MdAutoDelete /></button>
+                                    </div> */}
+
+                                    <div className="card-actions justify-evenly">
+                                        <select onChange={(e) =>
+                                            handleMenuSelection(item._id, e.target.value)
+                                        }
+                                         className="btn bg-yellow-200 text-2xl">
+                                            <option value="">Menu</option>
+                                            <option value="update">Update</option>
+                                            <option value="delete">Delete</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
