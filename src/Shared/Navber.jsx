@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-
 
 const Navber = () => {
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
@@ -19,9 +18,6 @@ const Navber = () => {
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme])
-
-
-    const navigate = useNavigate();
 
     const defualt = "https://i.ibb.co/9rczVxc/user.png";
 
@@ -43,7 +39,7 @@ const Navber = () => {
                         </ul>
                     </div>
                     <Link>
-                        <img className="w-[150px] rounded-full" src='https://i.ibb.co/3rXy46G/neutron-logo-white.png' alt="" />
+                        <img className="w-[150px]" src='https://i.ibb.co/FDp4ddm/Capture-removebg-preview.png' alt="" />
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -55,7 +51,6 @@ const Navber = () => {
                     {/* theme  */}
                     <label className="swap swap-rotate mr-3">
 
-                        {/* this hidden checkbox controls the state */}
                         <input type="checkbox" onChange={handleToggle} />
 
                         {/* sun icon */}
@@ -65,42 +60,15 @@ const Navber = () => {
                         <svg className="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
 
                     </label>
-
-                    {/* theme close  */}
-                    {1 ? (
-                        <>
-                            {/* <div className="lg:flex-col flex gap-2 justify-center">
+                    <div>
+                        <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img className="rounded-full flex justify-center items-center mx-auto lg:ml-5" src={user.photoURL || defualt} alt="user profile" />
+                                    <img className="rounded-full flex justify-center items-center mx-auto" src={defualt} alt="user profile" />
                                 </div>
-                                <h2>{user.displayName}</h2>
-                            </div>
-
-                            <button className="" onClick={handlelogout}>Sign Out</button> */}
-
-                            <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
-                                        <img className="rounded-full flex justify-center items-center mx-auto" src={defualt} alt="user profile" />
-                                    </div>
-                                </label>
-                                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                                    <li>
-                                        <a className="justify-between">
-                                            {/* <h2>{user.displayName}</h2> */}
-                                        </a>
-                                    </li>
-                                    {/* <li><button className="" onClick={handlelogout}>Log Out</button></li> */}
-                                </ul>
-                            </div>
-
-                        </>
-                    ) : (
-                        <NavLink className="btn btn-ghost capitalize" to="/login">
-                            Login
-                        </NavLink>
-                    )}
-
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

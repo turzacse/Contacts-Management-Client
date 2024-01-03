@@ -2,10 +2,14 @@ import React from 'react';
 import Banner from '../../Components/Banner';
 import Use from '../../Components/Use';
 import Feature from '../../Components/Feature';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     return (
-        <div>
+        <>
+        <Helmet>
+            <title>Home</title>
+        </Helmet>
             <div className='mt-10'>
                 <Banner />
             </div>
@@ -25,7 +29,7 @@ const Home = () => {
             <div className='my-10'>
                 <Feature/>
             </div>
-        </div>
+        </>
     );
 };
 

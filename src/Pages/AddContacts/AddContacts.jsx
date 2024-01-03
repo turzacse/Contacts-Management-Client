@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 
 const AddContacts = () => {
@@ -84,7 +85,10 @@ const AddContacts = () => {
         e.target.reset();
     }
     return (
-        <div>
+        <>
+        <Helmet>
+            <title>Add contact</title>
+        </Helmet>
             <div className="bg-base-200 p-10 md:w-1/2 w-full mx-auto shadow-2xl my-4 rounded-2xl">
                 <h3 className="text-2xl font-semibold text-center mb-10">Add A Contact Info</h3>
                 <form onSubmit={handleAddProject}>
@@ -123,7 +127,7 @@ const AddContacts = () => {
 
                 </form>
             </div>
-        </div>
+        </>
     );
 };
 
